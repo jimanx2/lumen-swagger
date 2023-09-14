@@ -4,7 +4,7 @@ namespace Jimanx2\LumenSwaggerGenerator\Commands;
 
 use Illuminate\Support\Arr;
 use Illuminate\Routing\Route;
-use Illuminate\Routing\Router;
+use Laravel\Lumen\Routing\Router;
 use Illuminate\Console\Command;
 use Jimanx2\LumenSwaggerGenerator\RoutesParser;
 use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
