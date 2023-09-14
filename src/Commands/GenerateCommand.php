@@ -78,6 +78,9 @@ class GenerateCommand extends Command
         $arrayContent = $this->describer()->merge($arrayContent, $routesData);
         $arrayContent = $this->mergeWithFilesContent($arrayContent, config('swagger-generator.contentFilesAfter', []));
         $definitions = $this->generateAdditionalDefinitions();
+        if (empty($definitions)) {
+            $definitions['components'] = [];
+        }
         Variable::populateComponentsArrayWithCollectedClassReferences($definitions['components']);
         $arrayContent = $this->describer()->merge($arrayContent, $definitions);
         $content = $this->describer()->toYml($arrayContent);
