@@ -1,10 +1,10 @@
 <?php
 
-namespace DigitSoft\Swagger\Describer;
+namespace Jimanx2\LumenSwaggerGenerator\Describer;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Yaml\Variable;
-use DigitSoft\Swagger\Parser\WithReflections;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithReflections;
 
 /**
  * Trait WithRecursiveDescriber

@@ -1,9 +1,9 @@
 <?php
 
-namespace DigitSoft\Swagger;
+namespace Jimanx2\LumenSwaggerGenerator;
 
 use Illuminate\Support\ServiceProvider;
-use DigitSoft\Swagger\Commands\GenerateCommand;
+use Jimanx2\LumenSwaggerGenerator\Commands\GenerateCommand;
 
 class SwaggerGeneratorServiceProvider extends ServiceProvider
 {

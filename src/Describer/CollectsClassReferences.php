@@ -1,9 +1,9 @@
 <?php
 
-namespace DigitSoft\Swagger\Describer;
+namespace Jimanx2\LumenSwaggerGenerator\Describer;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\RoutesParser;
+use Jimanx2\LumenSwaggerGenerator\RoutesParser;
 
 /**
  * For `Variable` class. Adds a possibility to collect class data references.

@@ -1,18 +1,18 @@
 <?php
 
-namespace DigitSoft\Swagger\Commands;
+namespace Jimanx2\LumenSwaggerGenerator\Commands;
 
 use Illuminate\Support\Arr;
 use Illuminate\Routing\Route;
 use Illuminate\Routing\Router;
 use Illuminate\Console\Command;
-use DigitSoft\Swagger\RoutesParser;
-use DigitSoft\Swagger\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\RoutesParser;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Routing\RouteCollection;
-use DigitSoft\Swagger\Parser\WithDocParser;
-use DigitSoft\Swagger\Parser\WithReflections;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithDocParser;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithReflections;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
 
 /**
  * Main command to generate documentation.

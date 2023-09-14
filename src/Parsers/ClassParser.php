@@ -1,11 +1,11 @@
 <?php
 
-namespace DigitSoft\Swagger\Parsers;
+namespace Jimanx2\LumenSwaggerGenerator\Parsers;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Parser\WithDocParser;
-use DigitSoft\Swagger\Parser\WithReflections;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithDocParser;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithReflections;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
 
 class ClassParser
 {

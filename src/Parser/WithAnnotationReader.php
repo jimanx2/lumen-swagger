@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitSoft\Swagger\Parser;
+namespace Jimanx2\LumenSwaggerGenerator\Parser;
 
 use OA\BaseAnnotation;
 use Illuminate\Support\Arr;
@@ -80,7 +80,7 @@ trait WithAnnotationReader
         }
 
         $controllerNames = [
-            $checkExtending && is_object($route->getController()) ? get_class($route->getController()) : null, // Class from route definition
+            $checkExtending && is_object($route->getControllerClass()) ? $route->getControllerClass() : null, // Class from route definition
             $ref->class, // Class from reflection, where real method written
         ];
         $controllerNames = array_unique(array_filter($controllerNames));
@@ -133,7 +133,7 @@ trait WithAnnotationReader
      */
     protected function classAnnotations($class, ?string $name = null): array
     {
-        $className = is_string($class) ? $class : get_class($class);
+        $className = is_string($class) ? $class : $class;
         $ref = $this->reflectionClass($className);
         if (($annotations = $this->getCachedAnnotations($ref)) === null) {
             $annotations = $this->annotationReader()->getClassAnnotations($ref);

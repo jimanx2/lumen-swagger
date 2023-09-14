@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitSoft\Swagger\Parser;
+namespace Jimanx2\LumenSwaggerGenerator\Parser;
 
 use Illuminate\Routing\Route;
 
@@ -20,12 +20,15 @@ trait WithRouteReflections
     protected function routeReflection(Route $route): \ReflectionMethod|\ReflectionFunction
     {
         if ($route->getActionMethod() === 'Closure') {
-            $closure = $route->getAction('uses');
-
-            return $this->reflectionClosure($closure);
+            if (is_callable($closure = $route->getAction('uses'))) {
+                return $this->reflectionClosure($closure);
+            } else {
+                list($controller, $method) = explode("@", $closure);
+            }
+        } else {
+            $controller = $route->getControllerClass();
+            $method = $route->getActionMethod();
         }
-        $controller = $route->getController();
-        $method = $route->getActionMethod();
 
         return $this->reflectionMethod($controller, $method);
     }

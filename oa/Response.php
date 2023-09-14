@@ -3,11 +3,11 @@
 namespace OA;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 use Doctrine\Common\Annotations\Annotation;
 use Doctrine\Common\Annotations\Annotation\Target;
-use DigitSoft\Swagger\Parser\CleanupsDescribedData;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\CleanupsDescribedData;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
 use Doctrine\Common\Annotations\Annotation\Attribute;
 use Doctrine\Common\Annotations\Annotation\Attributes;
 

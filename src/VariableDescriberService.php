@@ -1,13 +1,13 @@
 <?php
 
-namespace DigitSoft\Swagger;
+namespace Jimanx2\LumenSwaggerGenerator;
 
 use Symfony\Component\Yaml\Yaml;
 use Illuminate\Filesystem\Filesystem;
-use DigitSoft\Swagger\Parser\WithReflections;
-use DigitSoft\Swagger\Describer\WithTypeParser;
-use DigitSoft\Swagger\Describer\WithExampleGenerator;
-use DigitSoft\Swagger\Describer\WithRecursiveDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithReflections;
+use Jimanx2\LumenSwaggerGenerator\Describer\WithTypeParser;
+use Jimanx2\LumenSwaggerGenerator\Describer\WithExampleGenerator;
+use Jimanx2\LumenSwaggerGenerator\Describer\WithRecursiveDescriber;
 
 /**
  * Service made to describe variables in swagger format

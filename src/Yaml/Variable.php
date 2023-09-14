@@ -1,13 +1,13 @@
 <?php
 
-namespace DigitSoft\Swagger\Yaml;
+namespace Jimanx2\LumenSwaggerGenerator\Yaml;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Parsers\ClassParser;
-use DigitSoft\Swagger\Parser\WithReflections;
-use DigitSoft\Swagger\Parser\WithAnnotationReader;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
-use DigitSoft\Swagger\Describer\CollectsClassReferences;
+use Jimanx2\LumenSwaggerGenerator\Parsers\ClassParser;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithReflections;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithAnnotationReader;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Describer\CollectsClassReferences;
 
 class Variable
 {

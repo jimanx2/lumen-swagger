@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitSoft\Swagger\Parser;
+namespace Jimanx2\LumenSwaggerGenerator\Parser;
 
 /**
  * Trait WithRouteReflections

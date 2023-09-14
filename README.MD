@@ -3,7 +3,7 @@ This package is made to automate API documentation for Swagger (Open Auth 3.0)
 
 ## Publish config
 ```bash
-php artisan vendor:publish --provider="DigitSoft\Swagger\SwaggerGeneratorServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Jimanx2\LumenSwaggerGenerator\SwaggerGeneratorServiceProvider" --tag="config"
 ```
 
 ## Usage

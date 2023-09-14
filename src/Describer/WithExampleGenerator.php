@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitSoft\Swagger\Describer;
+namespace Jimanx2\LumenSwaggerGenerator\Describer;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;

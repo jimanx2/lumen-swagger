@@ -4,8 +4,8 @@ namespace OA;
 
 use Doctrine\Common\Annotations\Annotation;
 use Doctrine\Common\Annotations\Annotation\Target;
-use DigitSoft\Swagger\Parser\CleanupsDescribedData;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\CleanupsDescribedData;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
 use Doctrine\Common\Annotations\Annotation\Attribute;
 
 /**

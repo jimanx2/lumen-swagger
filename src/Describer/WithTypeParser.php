@@ -1,13 +1,13 @@
 <?php
 
-namespace DigitSoft\Swagger\Describer;
+namespace Jimanx2\LumenSwaggerGenerator\Describer;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 
 /**
  * Trait WithTypeParser
- * @package DigitSoft\Swagger\Describer
+ * @package Jimanx2\LumenSwaggerGenerator\Describer
  * @mixin WithExampleGenerator
  */
 trait WithTypeParser

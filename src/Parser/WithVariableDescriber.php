@@ -1,8 +1,8 @@
 <?php
 
-namespace DigitSoft\Swagger\Parser;
+namespace Jimanx2\LumenSwaggerGenerator\Parser;
 
-use DigitSoft\Swagger\VariableDescriberService;
+use Jimanx2\LumenSwaggerGenerator\VariableDescriberService;
 
 /**
  * Trait WithVariableDescriber.

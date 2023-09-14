@@ -3,9 +3,9 @@
 namespace OA;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 use Doctrine\Common\Annotations\Annotation\Enum;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
 
 /**
  * @property-read mixed|null $exampleProcessed Processed example

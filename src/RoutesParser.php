@@ -1,22 +1,22 @@
 <?php
 
-namespace DigitSoft\Swagger;
+namespace Jimanx2\LumenSwaggerGenerator;
 
 use OA\Parameter;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Routing\Route;
 use Illuminate\Console\OutputStyle;
-use DigitSoft\Swagger\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 use Illuminate\Routing\RouteCollection;
-use DigitSoft\Swagger\Parser\WithDocParser;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithDocParser;
 use Illuminate\Foundation\Http\FormRequest;
-use DigitSoft\Swagger\Parser\RoutesParserEvents;
-use DigitSoft\Swagger\Parser\RoutesParserHelpers;
-use DigitSoft\Swagger\Parser\WithAnnotationReader;
-use DigitSoft\Swagger\Parser\WithRouteReflections;
-use DigitSoft\Swagger\Parser\CleanupsDescribedData;
-use DigitSoft\Swagger\Parser\WithVariableDescriber;
+use Jimanx2\LumenSwaggerGenerator\Parser\RoutesParserEvents;
+use Jimanx2\LumenSwaggerGenerator\Parser\RoutesParserHelpers;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithAnnotationReader;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithRouteReflections;
+use Jimanx2\LumenSwaggerGenerator\Parser\CleanupsDescribedData;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithVariableDescriber;
 
 class RoutesParser
 {
@@ -200,7 +200,7 @@ class RoutesParser
             return 'closure_' . $this->routeNum;
         }
         if (($id = $route->getName()) === null) {
-            $ctrlName = get_class($route->getController());
+            $ctrlName = $route->getControllerClass();
             $ctrlNameArr = explode('\\', $ctrlName);
             $ctrlBaseName = end($ctrlNameArr);
             $ctrlBaseName = Str::endsWith($ctrlBaseName, 'Controller') ? substr($ctrlBaseName, 0, -10) : $ctrlBaseName;
@@ -865,7 +865,7 @@ class RoutesParser
         $tags = [];
         if ($methodRef instanceof \ReflectionMethod) {
             $controllerNames = [
-                is_object($route->getController()) ? get_class($route->getController()) : null, // Class from route definition
+                is_object($route->getControllerClass()) ? $route->getControllerClass() : null, // Class from route definition
                 $methodRef->class, // Class from reflection, where real method written
             ];
             $controllerNames = array_unique(array_filter($controllerNames));

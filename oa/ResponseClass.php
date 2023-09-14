@@ -3,10 +3,10 @@
 namespace OA;
 
 use Illuminate\Support\Arr;
-use DigitSoft\Swagger\Yaml\Variable;
+use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 use Doctrine\Common\Annotations\Annotation;
-use DigitSoft\Swagger\Parser\WithReflections;
-use DigitSoft\Swagger\Parser\WithAnnotationReader;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithReflections;
+use Jimanx2\LumenSwaggerGenerator\Parser\WithAnnotationReader;
 use Doctrine\Common\Annotations\Annotation\Target;
 use Doctrine\Common\Annotations\Annotation\Attribute;
 use Doctrine\Common\Annotations\Annotation\Attributes;
