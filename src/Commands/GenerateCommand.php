@@ -53,7 +53,10 @@ class GenerateCommand extends Command
         parent::__construct();
         $this->files = $files;
         $this->router = $router;
-        $this->routes = $router->getRoutes();
+        $this->routes = array_reduce($router->getRoutes(), function($out, $route) {
+            $out->add(new Route($route["method"], $route["uri"], $route["action"]));
+            return $out;
+        }, new RouteCollection());
     }
 
     /**
