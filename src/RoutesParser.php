@@ -10,7 +10,7 @@ use Illuminate\Console\OutputStyle;
 use Jimanx2\LumenSwaggerGenerator\Yaml\Variable;
 use Illuminate\Routing\RouteCollection;
 use Jimanx2\LumenSwaggerGenerator\Parser\WithDocParser;
-use Illuminate\Foundation\Http\FormRequest;
+use Anik\Form\FormRequest;
 use Jimanx2\LumenSwaggerGenerator\Parser\RoutesParserEvents;
 use Jimanx2\LumenSwaggerGenerator\Parser\RoutesParserHelpers;
 use Jimanx2\LumenSwaggerGenerator\Parser\WithAnnotationReader;
