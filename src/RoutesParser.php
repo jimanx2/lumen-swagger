@@ -757,15 +757,29 @@ class RoutesParser
 
         foreach ($labels as $attribute => $label) {
             $attributeNormalized = $attribute;
+
+            $description = Str::ucfirst($attribute);
+            if (array_key_exists("description", $label)) {
+                $description = Str::ucfirst($label["description"]);
+            }
+
             // Attribute names with a wildcard (*)
             if (str_contains($attribute, '*')) {
                 $attributeNormalized = str_replace('*', 'items', str_replace('*.', 'items.properties.', $attribute));
                 if (Arr::get($rules['properties'], $attributeNormalized) !== null) {
-                    Arr::set($rules['properties'], $attributeNormalized . '.description', Str::ucfirst($label));
+                    Arr::set($rules['properties'], $attributeNormalized . '.description', $description);
                 }
                 // Regular attribute names
             } elseif (isset($rules['properties'][$attribute])) {
-                $rules['properties'][$attribute]['description'] = Str::ucfirst($label);
+                $rules['properties'][$attribute]['description'] = $description;
+            }
+
+            if (array_key_exists("example", $label)) {
+                $rules['properties'][$attribute]['example'] = $label['example'];
+            }
+
+            if (array_key_exists("enum", $label)) {
+                $rules['properties'][$attribute]['enum'] = $label['enum'];
             }
         }
     }
