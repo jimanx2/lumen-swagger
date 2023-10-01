@@ -19,7 +19,11 @@ trait WithFaker
     protected function faker(): Generator
     {
         if (! isset($this->faker)) {
-            $this->faker = \Faker\Factory::create();
+            $locale = "en_US";
+            if (function_exists("config")) {
+                $locale = config("swagger-generator.faker_locale", "en_US");
+            }
+            $this->faker = \Faker\Factory::create($locale);
         }
 
         return $this->faker;
