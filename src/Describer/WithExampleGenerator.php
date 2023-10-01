@@ -113,7 +113,7 @@ trait WithExampleGenerator
     {
         $sequence = [];
         for ($i = 1; $i <= $count; $i++) {
-            $elem = $this->exampleByRuleSequential($rule, $i);
+            $elem = $this->exampleByRuleInternal($rule);
             $sequence[] = $elem;
             if ($elem === null) {
                 break;
