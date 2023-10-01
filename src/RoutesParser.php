@@ -397,10 +397,18 @@ class RoutesParser
         if ($asRaw || ($result = $this->getComponent($classKey, static::COMPONENT_REQUESTS)) === null) {
             $rulesData = $this->parseFormRequestRules($className);
             $annotationsData = $this->parseFormRequestAnnotations($className);
+            
             if (empty($annotationsData['description'])) {
                 $classRef = $this->reflectionClass($className);
                 $descriptionRaw = $classRef->getDocComment();
                 $annotationsData['description'] = is_string($descriptionRaw) ? $this->getDocSummary($descriptionRaw) : '';
+            }
+
+            // remove non documented rules
+            foreach ($rulesData['properties'] as $prop => $def) {
+                if (!in_array($prop, array_keys($annotationsData['content']))) {
+                    unset($rulesData['properties'][$prop]);
+                }
             }
 
             $result = $annotationsData;
