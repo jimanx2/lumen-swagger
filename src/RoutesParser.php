@@ -405,9 +405,11 @@ class RoutesParser
             }
 
             // remove non documented rules
-            foreach ($rulesData['properties'] as $prop => $def) {
-                if (!in_array($prop, array_keys($annotationsData['content']))) {
-                    unset($rulesData['properties'][$prop]);
+            if (array_key_exists('properties', $rulesData)) {
+                foreach ($rulesData['properties'] as $prop => $def) {
+                    if (!in_array($prop, array_keys($annotationsData['content']))) {
+                        unset($rulesData['properties'][$prop]);
+                    }
                 }
             }
 
